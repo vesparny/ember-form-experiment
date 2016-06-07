@@ -1,0 +1,17 @@
+<div class="p2">
+  <h2>Add new applicance</h2>
+  <form class="sm-col-4" {{action "submit" on="submit"}}>
+    <label>Name</label>
+    {{input type="text" value=form.name class="block col-12 mb1 field" keyUp=(action "persist")}}
+    <label>Description</label>
+    {{input type="text" value=form.description class="block col-12 mb1 field" keyUp=(action "persist")}}
+    <label>Images</label>
+    {{input type="file" multiple="multiple" class="border-none block col-12 mb1 field" change=(action "persist")}}
+    {{#each form.images as |img|}}
+      <div>
+        <img src={{img.base64EncodedDataURL}} />
+      </div>
+    {{/each}}
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
