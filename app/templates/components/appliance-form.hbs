@@ -6,7 +6,7 @@
     <label>Description</label>
     {{input type="text" value=form.description class="block col-12 mb1 field" keyUp=(action "persist")}}
     <label>Images</label>
-    {{input type="file" multiple="multiple" class="border-none block col-12 mb1 field" change=(action "persist")}}
+    {{input type="file" multiple="multiple" accept="image/*" class="border-none block col-12 mb1 field" change=(action "persist")}}
     {{#each form.images as |img|}}
       <div>
         <img src={{img.base64EncodedDataURL}} />

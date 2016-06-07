@@ -1,3 +1,5 @@
+// this is my first ember Component
+// maybe I could have splitted the logic more, in several smaller components ?
 import ls from '../utils/localStorage';
 import Ember from 'ember';
 
