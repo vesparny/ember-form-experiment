@@ -7,11 +7,12 @@
     {{input type="text" value=form.description class="block col-12 mb1 field" keyUp=(action "persist")}}
     <label>Images</label>
     {{input type="file" multiple="multiple" accept="image/*" class="border-none block col-12 mb1 field" change=(action "persist")}}
+    <button type="submit" class="btn btn-primary">Save</button>
+    <hr />
     {{#each form.images as |img|}}
       <div>
-        <img src={{img.base64EncodedDataURL}} />
+        <img src={{img.base64EncodedDataURL}} style="max-width:200px"/>
       </div>
     {{/each}}
-    <button type="submit" class="btn btn-primary">Save</button>
   </form>
 </div>
