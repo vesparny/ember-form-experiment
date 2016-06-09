@@ -1,6 +1,6 @@
 // using npm modules thanks to ember-browserify
 // not sure this is the way to deal with services in ember
-import _ from 'npm:lodash'
+import _ from 'npm:lodash';
 
 export const retrieve = (key) => {
   try {
